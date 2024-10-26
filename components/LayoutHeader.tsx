@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HiOutlineSearch } from "react-icons/hi";
 
-export default function Header() {
+export default function LayoutHeader() {
   return (
     <header className="flex justify-between items-center w-full max-w-7xl mx-auto p-4">
       <Link href="/">Home</Link>
