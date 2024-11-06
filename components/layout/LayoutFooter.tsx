@@ -9,7 +9,7 @@ export default function LayoutFooter() {
           <Link href="/about">About</Link>
           <Link href="/blog">Blog</Link>
         </nav>
-        <div>{/* 소셜 미디어 링크 */}</div>
+        <div>{/* 소셜 미디어 링크 */}</div>1
         <div className="w-full mx-auto border-t border-gray-600 py-4 text-gray-500">
           Copyright &copy; {new Date().getFullYear()}. All rights reserved.
         </div>
