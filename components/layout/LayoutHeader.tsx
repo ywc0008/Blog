@@ -1,9 +1,26 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 // import { HiOutlineSearch } from "react-icons/hi";
 
 export default function LayoutHeader() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full max-w-[980px] mx-auto p-4">
+    <header
+      className={`sticky top-0 bg-white w-full max-w-[980px] mx-auto p-4 transition-opacity duration-200
+      ${isScrolled ? "bg-opacity-80 backdrop-blur-sm" : "bg-opacity-100"}`}
+    >
       <nav className="flex justify-between items-center gap-8">
         <Link href="/">Home</Link>
         <div className="flex items-center gap-8">
