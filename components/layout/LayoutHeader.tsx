@@ -21,9 +21,9 @@ export default function LayoutHeader() {
       className={`sticky top-0 bg-white w-full max-w-[980px] mx-auto p-4 transition-opacity duration-200
       ${isScrolled ? "bg-opacity-80 backdrop-blur-sm" : "bg-opacity-100"}`}
     >
-      <nav className="flex justify-between items-center gap-8">
+      <nav className="flex justify-between items-center gap-8 font-bold">
         <Link href="/">Home</Link>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 font-medium">
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
           {/* <HiOutlineSearch size={20} className="cursor-pointer" /> */}
