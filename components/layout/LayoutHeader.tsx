@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HiOutlineSearch } from "react-icons/hi";
+// import { HiOutlineSearch } from "react-icons/hi";
 
 export default function LayoutHeader() {
   return (
@@ -9,7 +9,7 @@ export default function LayoutHeader() {
         <div className="flex items-center gap-8">
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
-          <HiOutlineSearch size={20} className="cursor-pointer" />
+          {/* <HiOutlineSearch size={20} className="cursor-pointer" /> */}
         </div>
       </nav>
     </header>

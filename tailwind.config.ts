@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+export default {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "c-footer": {
+          gray: "#F5F5F7",
+          border: "#CECECF",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -50,7 +54,6 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        "footer-gray": "#F5F5F7",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -60,5 +63,4 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
-export default config;
+} satisfies Config;
