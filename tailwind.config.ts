@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "c-footer": {
+        c: {
           gray: "#F5F5F7",
           border: "#CECECF",
         },

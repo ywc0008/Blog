@@ -1,6 +1,6 @@
 export default function HomeNewPost() {
   return (
-    <section className="custom-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+    <section className="bg-c-gray custom-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
       <h1 className="custom-h1">최신 포스트</h1>
       <div className="bg-[hsl(var(--chart-1))] sm:col-span-2 lg:col-span-6 h-48">
         1

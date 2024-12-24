@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LayoutFooter() {
   return (
-    <footer className="bg-c-footer-gray text-white  ">
+    <footer className="bg-c-gray text-white  ">
       <div className="flex flex-col items-center max-w-[980px] mx-auto px-[22px]">
         <nav className="w-full grid grid-cols-3 py-4 text-black">
           <Link href="/">Home</Link>
