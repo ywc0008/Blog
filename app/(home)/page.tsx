@@ -1,3 +1,5 @@
+import HomeWrapper from "@/components/home/HomeWrapper";
+
 export default function HomePage() {
-  return <div>Hello World</div>;
+  return <HomeWrapper />;
 }
