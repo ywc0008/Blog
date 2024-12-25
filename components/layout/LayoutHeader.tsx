@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-// import { HiOutlineSearch } from "react-icons/hi";
+
+import SearchDialog from "./SearchDialog";
+// import SearchDrawer from "./SearchDrawer";
 
 export default function LayoutHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +28,8 @@ export default function LayoutHeader() {
         <div className="flex items-center gap-8 font-medium">
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
-          {/* <HiOutlineSearch size={20} className="cursor-pointer" /> */}
+          <SearchDialog />
+          {/* <SearchDrawer /> */}
         </div>
       </nav>
     </header>
