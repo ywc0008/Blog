@@ -58,7 +58,7 @@ export default function SearchDialog() {
 
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Button onClick={handleSearch}>검색</Button>
               </TooltipTrigger>
               <TooltipContent>
