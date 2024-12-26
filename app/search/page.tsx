@@ -1,4 +1,4 @@
-type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+import type { SearchParams } from "@/types/page";
 
 interface SearchPageProps {
   searchParams: SearchParams;
