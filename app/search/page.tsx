@@ -1,7 +1,5 @@
-import type { SearchParams } from "@/types/page";
-
 interface SearchPageProps {
-  searchParams: SearchParams;
+  searchParams: Promise<{ query: string }>;
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
