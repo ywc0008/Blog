@@ -1,21 +1,19 @@
-import type { Post } from "@/types/post";
+import type { PostData } from "@/lib/mdx";
 
-import { getAllPosts } from "@/lib/mdx";
-
-import HomeMorePost from "./HomeMorePost";
 import HomeNewPost from "./HomeNewPost";
-import HomeTravelPost from "./HomeTravelPost";
+// import HomeMorePost from "./HomeMorePost";
+// import HomeTravelPost from "./HomeTravelPost";
 
-export default async function HomeWrapper() {
-  const posts = await getAllPosts();
+interface HomeWrapperProps {
+  contents: PostData[];
+}
 
-  console.log(posts);
-
+export default function HomeWrapper({ contents }: HomeWrapperProps) {
   return (
     <>
-      <HomeNewPost posts={posts as Post[]} />
-      <HomeTravelPost />
-      <HomeMorePost />
+      <HomeNewPost contents={contents} />
+      {/* <HomeTravelPost /> */}
+      {/* <HomeMorePost /> */}
     </>
   );
 }
