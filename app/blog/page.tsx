@@ -1,4 +1,4 @@
-import Text from "@/markdown/text.mdx";
+import Text from "@/content/text.mdx";
 
 export default function BlogPage() {
   return (

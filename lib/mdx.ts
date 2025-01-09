@@ -2,13 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-interface PostData {
+export interface PostData {
   title: string;
   description: string;
   date: string; // ISO 형식의 날짜 문자열
   author?: string;
   tags?: string[];
-  [key: string]: any; // 추가적인 메타데이터를 허용
+  [key: string]: string | string[] | undefined; // 추가적인 메타데이터를 허용
 }
 
 const postsDirectory = path.join(process.cwd(), "posts");
