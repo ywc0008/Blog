@@ -17,8 +17,8 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
   const recentContents = contents.slice(0, 10) || [];
 
   return (
-    <div className="bg-c-gray">
-      <section className="max-w-[980px] mx-auto custom-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
+    <section className="bg-c-gray">
+      <div className="max-w-[980px] mx-auto custom-section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
         <h1 className="custom-h1">최신 포스트</h1>
 
         {/* 첫 번째 포스트 - 가장 큰 사이즈 */}
@@ -94,7 +94,7 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
             {content.title}
           </Link>
         ))}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
