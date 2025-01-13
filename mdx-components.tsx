@@ -9,7 +9,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="mt-10 mb-4 text-3xl font-bold text-gray-900 dark:text-white">
+      <h2 className="mt-10 mb-4 text-3xl font-bold text-gray-900 dark:text-red-400">
         {children}
       </h2>
     ),
@@ -18,12 +18,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </p>
     ),
-    img: (props) => (
+    img: (props: ImageProps) => (
       <Image
         sizes="100vw"
         className="rounded-lg border border-gray-200 dark:border-gray-700"
         style={{ width: "100%", height: "auto" }}
-        {...(props as ImageProps)}
+        {...props}
       />
     ),
     a: ({ children, href }) => (
