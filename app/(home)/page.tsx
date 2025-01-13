@@ -1,7 +1,8 @@
-import HomeWrapper from "@/components/home/HomeWrapper";
 import { getSortedPosts } from "@/lib/mdx";
 
-export default async function HomePage() {
+import HomeWrapper from "@/components/home/HomeWrapper";
+
+export default function HomePage() {
   const contents = getSortedPosts();
 
   return <HomeWrapper contents={contents} />;
