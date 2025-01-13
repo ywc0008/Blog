@@ -1,10 +1,5 @@
-import Text from "@/content/text.mdx";
+import BlogWrapper from "@/components/blog/BlogWrapper";
 
 export default function BlogPage() {
-  return (
-    <div>
-      BlogPage
-      <Text />
-    </div>
-  );
+  return <BlogWrapper contents={contents} />;
 }

@@ -89,9 +89,28 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
           <Link
             href={getPostLink(content)}
             key={content.title}
-            className="bg-[hsl(var(--primary))] lg:col-span-2 h-36"
+            className="flex flex-col bg-white lg:col-span-2 h-36 rounded-3xl"
           >
-            {content.title}
+            <Image
+              src={content.thumbnail as string}
+              alt={content.title}
+              width={200}
+              height={200}
+              className="object-cover rounded-t-3xl"
+            />
+            <div className="flex flex-col justify-between h-full p-5">
+              <div>
+                <div className="text-gray-500">{content.category}</div>
+                <div className="text-2xl font-extrabold">{content.title}</div>
+              </div>
+              <div className="text-gray-500 font-semibold">
+                {new Date(content?.date).toLocaleDateString("ko-KR", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </div>
+            </div>
           </Link>
         ))}
       </div>
