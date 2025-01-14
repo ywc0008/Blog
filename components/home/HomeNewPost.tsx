@@ -62,7 +62,7 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
           <Link
             href={getPostLink(content)}
             key={content.title}
-            className="flex flex-col bg-white lg:col-span-3 h-96 rounded-3xl"
+            className="flex flex-col bg-white lg:col-span-3 h-[460px] rounded-3xl"
           >
             <div className="relative w-full h-3/5">
               <Image
