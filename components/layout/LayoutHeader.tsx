@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import SearchDialog from "./SearchDialog";
+import { AboutPopover } from "./AboutPopover";
 // import SearchDrawer from "./SearchDrawer";
 
 export default function LayoutHeader() {
@@ -29,9 +30,9 @@ export default function LayoutHeader() {
           <Link href="/" className="text-xl">
             Home
           </Link>
-          <div className="flex items-center gap-8 font-medium">
+          <div className="flex items-center gap-8 font-medium text-md text-black">
             <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
+            <AboutPopover />
             <SearchDialog />
             {/* <SearchDrawer /> */}
           </div>
