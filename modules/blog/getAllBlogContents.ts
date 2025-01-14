@@ -1,8 +1,10 @@
+import type { Post } from "@/types/post";
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export function getAllBlogContents() {
+export async function getAllBlogContents(): Promise<Post[]> {
   // blog 컨텐츠 디렉토리 경로 설정
   const blogDirectory = path.join(process.cwd(), "contents/blog");
 

@@ -1,3 +1,5 @@
+import type { Post } from "@/types/post";
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -7,7 +9,7 @@ import matter from "gray-matter";
 //   limit: number;
 // }
 
-export function getAllTravelContents() {
+export async function getAllTravelContents(): Promise<Post[]> {
   // blog 컨텐츠 디렉토리 경로 설정
   const travelDirectory = path.join(process.cwd(), "contents/travel");
 
