@@ -8,7 +8,9 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
   const decodedSlug = decodeURIComponent(slug);
-  const { default: Post } = await import(`@/content/travel/${decodedSlug}.mdx`);
+  const { default: Post } = await import(
+    `@/contents/travel/${decodedSlug}.mdx`
+  );
 
   return <Post />;
 }

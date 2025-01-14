@@ -1,9 +1,10 @@
-import type { PostData } from "@/lib/mdx";
+import { Post } from "@/types/post";
 
 interface BlogWrapperProps {
-  contents: PostData[];
+  contents: Post[];
 }
 
 export default function BlogWrapper({ contents }: BlogWrapperProps) {
+  console.log(contents);
   return <div>BlogWrapper</div>;
 }

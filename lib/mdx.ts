@@ -12,7 +12,7 @@ export interface PostData {
   [key: string]: string | string[] | undefined; // 추가적인 메타데이터를 허용
 }
 
-const postsDirectory = path.join(process.cwd(), "content");
+const postsDirectory = path.join(process.cwd(), "contents");
 
 function getAllFiles(dirPath: string, arrayOfFiles: string[] = []): string[] {
   const files = fs.readdirSync(dirPath);
