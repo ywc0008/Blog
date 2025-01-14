@@ -1,8 +1,9 @@
-import BlogWrapper from "@/components/blog/BlogWrapper";
 import { getAllBlogContents } from "@/modules/blog/getAllBlogContents";
 
-export default function BlogPage() {
-  const contents = getAllBlogContents();
+import BlogWrapper from "@/components/blog/BlogWrapper";
+
+export default async function BlogPage() {
+  const contents = await getAllBlogContents();
 
   return <BlogWrapper contents={contents} />;
 }

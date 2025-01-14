@@ -12,7 +12,7 @@ import TravelWrapper from "@/components/travel/TravelWrapper";
 export default async function TravelPage() {
   // const page = (await searchParams).page || 1;
   // const limit = (await searchParams).limit || 10;
-  const contents = getAllTravelContents();
+  const contents = await getAllTravelContents();
 
   return <TravelWrapper contents={contents} />;
 }

@@ -1,11 +1,11 @@
-import type { PostData } from "@/lib/mdx";
+import type { Post } from "@/types/post";
 
 import HomeNewPost from "./HomeNewPost";
 // import HomeMorePost from "./HomeMorePost";
 // import HomeTravelPost from "./HomeTravelPost";
 
 interface HomeWrapperProps {
-  contents: PostData[];
+  contents: Post[];
 }
 
 export default function HomeWrapper({ contents }: HomeWrapperProps) {
