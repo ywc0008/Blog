@@ -15,7 +15,7 @@ export default async function Page({
 
 export function generateStaticParams() {
   const posts = fs
-    .readdirSync(path.join(process.cwd(), "content/blog"))
+    .readdirSync(path.join(process.cwd(), "contents/blog"))
     // .mdx 확장자를 제거하고 슬러그만 추출합니다
     .map((filename) => ({
       slug: filename.replace(".mdx", ""),

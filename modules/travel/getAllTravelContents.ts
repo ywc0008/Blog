@@ -2,6 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+// interface GetAllTravelContentsProps {
+//   page: number;
+//   limit: number;
+// }
+
 export function getAllTravelContents() {
   // blog 컨텐츠 디렉토리 경로 설정
   const travelDirectory = path.join(process.cwd(), "contents/travel");

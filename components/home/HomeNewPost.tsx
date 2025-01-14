@@ -27,13 +27,16 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
             href={getPostLink(recentContents[0])}
             className="flex bg-white sm:col-span-2 lg:col-span-6 h-80 rounded-3xl"
           >
-            <Image
-              src={recentContents[0].thumbnail as string}
-              alt={recentContents[0].title}
-              width={750}
-              height={750}
-              className="object-cover rounded-l-3xl"
-            />
+            <div className="relative w-3/4">
+              <Image
+                src={recentContents[0].thumbnail as string}
+                alt={recentContents[0].title}
+                fill
+                priority
+                className="object-cover rounded-l-3xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
             <div className="flex flex-col justify-between h-full p-5">
               <div>
                 <div className="text-gray-500">
@@ -61,14 +64,16 @@ export default function HomeNewPost({ contents }: HomeNewPostProps) {
             key={content.title}
             className="flex flex-col bg-white lg:col-span-3 h-96 rounded-3xl"
           >
-            <Image
-              src={content.thumbnail as string}
-              alt={content.title}
-              width={200}
-              height={200}
-              className="object-cover rounded-t-3xl"
-            />
-            <div className="flex flex-col justify-between h-full p-5">
+            <div className="relative w-full h-3/5">
+              <Image
+                src={content.thumbnail as string}
+                alt={content.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-t-3xl"
+              />
+            </div>
+            <div className="flex flex-col justify-between h-2/5 p-5">
               <div>
                 <div className="text-gray-500">{content.category}</div>
                 <div className="text-2xl font-extrabold">{content.title}</div>
