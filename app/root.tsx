@@ -48,7 +48,9 @@ export default function App() {
   return (
     <>
       <LayoutHeader />
-      <Outlet />
+      <main className="max-w-[980px] mx-auto">
+        <Outlet />
+      </main>
       <LayoutFooter />
     </>
   );
