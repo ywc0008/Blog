@@ -3,8 +3,8 @@ import { config } from "@/config";
 import { Rss } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { DarkModeToggle } from "./DarkModeToggle";
 import { Button } from "./ui/button";
+import { Github } from "./icons";
 
 export const Footer: FunctionComponent = () => {
   return (
@@ -13,29 +13,29 @@ export const Footer: FunctionComponent = () => {
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
         </div>
-        <div className="text-xs text-muted-foreground hidden lg:block">
+        {/* <div className="text-xs text-muted-foreground hidden lg:block">
           <Link
             href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
           >
             Blog powered by wisp
           </Link>
-        </div>
-        <div>
+        </div> */}
+        <div className="flex items-center gap-[10px]">
           <Link href="/rss">
-            <Button variant="ghost" className="p-2">
-              <Rss className="w-4 h-4" />
-            </Button>
+            <Rss className="h-5 w-5" />
           </Link>
-          <DarkModeToggle />
+          <Link href="https://github.com/ywc0008">
+            <Github className="h-5 w-5" />
+          </Link>
         </div>
       </div>
-      <div className="text-xs text-muted-foreground lg:hidden">
+      {/* <div className="text-xs text-muted-foreground lg:hidden">
         <Link
           href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
         >
           Blog powered by wisp
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

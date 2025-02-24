@@ -12,6 +12,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import { DarkModeToggle } from "./DarkModeToggle";
 interface MenuItem {
   name: string;
   href: string;
@@ -25,7 +26,7 @@ export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav className="flex items-center justify-between">
       <div className="hidden md:flex items-center">
         {menuItems.map((item) => (
           <div key={item.href} className="ml-4 md:ml-8">
@@ -67,6 +68,9 @@ export const Navigation: FunctionComponent = () => {
             </SheetHeader>
           </SheetContent>
         </Sheet>
+      </div>
+      <div className="ml-4">
+        <DarkModeToggle />
       </div>
     </nav>
   );
