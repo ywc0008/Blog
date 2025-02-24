@@ -18,15 +18,15 @@ const content = `# Welcome to my blog
 
 export async function generateMetadata() {
   return {
-    title: "About Me",
-    description: "블로그를 통해 생각 정리",
+    title: "Welcome to my blog",
+    description: "열심히 볼로깅을 해보자",
     openGraph: {
-      title: "About Me",
-      description: "블로그를 통해 생각 정리",
+      title: "Welcome to my blog",
+      description: "열심히 볼로깅을 해보자",
       images: [
         signOgImageUrl({
-          title: "Samantha",
-          label: "About Me",
+          title: "Welcome to my blog",
+          label: "Welcome to my blog",
           brand: config.blog.name,
         }),
       ],
