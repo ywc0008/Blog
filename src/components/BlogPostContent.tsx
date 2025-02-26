@@ -2,6 +2,7 @@
 import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
+import { ScrollProgress } from "./magicui/scroll-progress";
 
 export const PostContent = ({ content }: { content: string }) => {
   const sanitizedContent = sanitize(content, {
@@ -55,6 +56,7 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   const { title, publishedAt, createdAt, content, tags } = post;
   return (
     <div>
+      <ScrollProgress className="top-[92px]" />
       <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
         <h1>{title}</h1>
         <PostContent content={content} />

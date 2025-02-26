@@ -25,9 +25,9 @@ const slugs = [
   "github",
 ];
 
-const content = `# Welcome to ywc blog
+const content = `# Welcome to my blog!
 
-안녕하세요. 
+안녕하세요!
 
 [인터넷에서 임차인이 아닌 소유자가 되는 방법](https://news.hada.io/topic?id=18565&utm_source=slack&utm_medium=bot&utm_campaign=T0755SQJYDU) 긱뉴스 글을 읽고 나도 나만의 웹사이트를 가져보자라는 생각을 하게 되었습니다.
 
