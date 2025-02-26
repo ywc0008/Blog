@@ -1,10 +1,29 @@
 import Markdown from "react-markdown";
-
 import { signOgImageUrl } from "@/lib/og-image";
 
+import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { config } from "@/config";
+
+const slugs = [
+  "html5",
+  "css3",
+  "tailwindcss",
+  "javascript",
+  "typescript",
+  "python",
+  "react",
+  "nextdotjs",
+  "nestjs",
+  "supabase",
+  "prisma",
+  "postgresql",
+  "jest",
+  "vercel",
+  "git",
+  "github",
+];
 
 const content = `# Welcome to ywc blog
 
@@ -35,11 +54,18 @@ export async function generateMetadata() {
 }
 
 const Page = async () => {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
+
   return (
     <div className="container mx-auto px-5">
       <Header />
       <div className="prose lg:prose-lg dark:prose-invert m-auto mt-20 mb-10 blog-content">
         <Markdown>{content}</Markdown>
+      </div>
+      <div className="relative flex size-full items-center justify-center overflow-hidden">
+        <IconCloud images={images} />
       </div>
       <Footer />
     </div>
