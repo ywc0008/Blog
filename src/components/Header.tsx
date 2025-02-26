@@ -13,6 +13,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
 import { DarkModeToggle } from "./DarkModeToggle";
+import { sendGAEvent } from "@next/third-parties/google";
 interface MenuItem {
   name: string;
   href: string;
@@ -33,6 +34,12 @@ export const Navigation: FunctionComponent = () => {
             <a
               href={item.href}
               target={item.openInNewTab ? "_blank" : "_self"}
+              onClick={() => {
+                sendGAEvent("click", "navigationClicked", {
+                  category: "navigation",
+                  label: item.name,
+                });
+              }}
               className={cn(
                 "hover:text-gray-900",
                 pathname === item.href && "font-semibold"

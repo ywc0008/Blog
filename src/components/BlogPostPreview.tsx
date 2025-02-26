@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { GetPostsResult } from "@/lib/wisp";
+import { sendGAEvent } from "@next/third-parties/google";
 import { formatDate } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,15 @@ export const BlogPostPreview: FunctionComponent<{
 }> = ({ post }) => {
   return (
     <div className="break-words">
-      <Link href={`/blog/${post.slug}`}>
+      <Link
+        href={`/blog/${post.slug}`}
+        onClick={() => {
+          sendGAEvent("click", "postClicked", {
+            category: "post",
+            label: post.title,
+          });
+        }}
+      >
         <div className="aspect-[16/9] relative">
           <Image
             alt={post.title}
