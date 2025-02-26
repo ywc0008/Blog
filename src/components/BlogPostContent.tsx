@@ -56,7 +56,7 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   const { title, publishedAt, createdAt, content, tags } = post;
   return (
     <div>
-      <ScrollProgress className="top-[92px]" />
+      <ScrollProgress className="top-[77px] md:top-[92px]" />
       <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
         <h1>{title}</h1>
         <PostContent content={content} />
