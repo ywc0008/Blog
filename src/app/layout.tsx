@@ -1,8 +1,11 @@
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+import { cn } from "@/lib/utils";
+import { config } from "@/config";
+import { signOgImageUrl } from "@/lib/og-image";
+
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -42,6 +45,7 @@ export default function RootLayout({
         <Providers>
           <main>{children}</main>
         </Providers>
+        <GoogleAnalytics gaId="G-QTXN4MTCZN" />
       </body>
     </html>
   );
