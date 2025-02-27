@@ -3,6 +3,8 @@ import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
 import { ScrollProgress } from "./magicui/scroll-progress";
+import { ContentWithCustomComponents } from "@wisp-cms/react-custom-component";
+import TerminalDemo from "./terminalDemo";
 
 export const PostContent = ({ content }: { content: string }) => {
   const sanitizedContent = sanitize(content, {
@@ -40,14 +42,25 @@ export const PostContent = ({ content }: { content: string }) => {
       ...defaults.allowedAttributes,
       "*": ["style"],
       iframe: ["src", "allowfullscreen", "style"],
+      div: [
+        "data-name",
+        "data-wisp-react-component",
+        "data-version",
+        "data-props",
+      ],
     },
     allowedIframeHostnames: ["www.youtube.com", "www.youtube-nocookie.com"],
   });
   return (
     <div
       className="blog-content mx-auto"
-      dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-    ></div>
+      // dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+    >
+      <ContentWithCustomComponents
+        content={sanitizedContent}
+        customComponents={{ TerminalDemo }}
+      />
+    </div>
   );
 };
 
