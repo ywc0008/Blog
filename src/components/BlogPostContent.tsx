@@ -52,10 +52,7 @@ export const PostContent = ({ content }: { content: string }) => {
     allowedIframeHostnames: ["www.youtube.com", "www.youtube-nocookie.com"],
   });
   return (
-    <div
-      className="blog-content mx-auto"
-      // dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-    >
+    <div className="blog-content mx-auto">
       <ContentWithCustomComponents
         content={sanitizedContent}
         customComponents={{ TerminalDemo }}

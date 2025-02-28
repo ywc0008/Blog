@@ -47,13 +47,13 @@ export const BlogPostPreview: FunctionComponent<{
           </div>
         </Link>
         <div className="grid grid-cols-1 gap-3 md:col-span-2 p-4">
-          <h2 className="font-sans font-semibold tracking-tighter text-primary text-2xl md:text-3xl">
+          <h2 className="font-sans font-semibold tracking-tighter text-primary text-2xl text-wrap line-clamp-2">
             <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h2>
           <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground">
             {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
           </div>
-          <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-4 text-muted-foreground">
+          <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-3 text-muted-foreground text-wrap">
             {post.description}
           </div>
           <div className="text-sm text-muted-foreground">
