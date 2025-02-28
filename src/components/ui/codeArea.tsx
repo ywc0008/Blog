@@ -15,8 +15,8 @@ interface CodeAreaProps {
 export function CodeArea({
   code,
   language,
-  lightTheme,
-  darkTheme,
+  lightTheme = "github-light",
+  darkTheme = "github-dark",
 }: CodeAreaProps) {
   const { theme, systemTheme } = useTheme();
   const [highlighted, setHighlighted] = useState("");
