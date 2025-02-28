@@ -1,9 +1,13 @@
 "use client";
-import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
-import { ScrollProgress } from "./magicui/scroll-progress";
 import { ContentWithCustomComponents } from "@wisp-cms/react-custom-component";
+
+import { GetPostResult } from "@/lib/wisp";
+
+import { ScrollProgress } from "./magicui/scroll-progress";
+
+import { CodeArea } from "./ui/codeArea";
 import TerminalDemo from "./terminalDemo";
 
 export const PostContent = ({ content }: { content: string }) => {
@@ -55,7 +59,7 @@ export const PostContent = ({ content }: { content: string }) => {
     <div className="blog-content mx-auto">
       <ContentWithCustomComponents
         content={sanitizedContent}
-        customComponents={{ TerminalDemo }}
+        customComponents={{ TerminalDemo, CodeArea }}
       />
     </div>
   );
@@ -70,7 +74,6 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
       <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
         <h1>{title}</h1>
         <PostContent content={content} />
-
         <div className="mt-10 opacity-40 text-sm">
           {tags.map((tag) => (
             <Link
