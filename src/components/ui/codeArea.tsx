@@ -45,13 +45,13 @@ export function CodeArea({
     if (highlighted) {
       return (
         <div
-          className="h-full overflow-auto bg-background font-mono text-md [&>pre]:h-full [&>pre]:!bg-transparent [&>pre]:p-4 [&_code]:break-all"
+          className="h-full overflow-auto bg-background font-mono text-lg [&>pre]:h-full [&>pre]:!bg-transparent [&>pre]:p-4 [&_code]:break-all"
           dangerouslySetInnerHTML={{ __html: highlighted }}
         />
       );
     } else {
       return (
-        <pre className="h-full overflow-auto break-all bg-background p-4 font-mono text-md text-foreground">
+        <pre className="h-full overflow-auto break-all bg-background p-4 font-mono text-xl text-foreground">
           {code}
         </pre>
       );
