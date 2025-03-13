@@ -8,7 +8,7 @@ import { GetPostResult } from "@/lib/wisp";
 import { ScrollProgress } from "./magicui/scroll-progress";
 
 import { CodeArea } from "./ui/codeArea";
-import TerminalDemo from "./terminalDemo";
+import TerminalCode from "./terminal-code";
 
 export const PostContent = ({ content }: { content: string }) => {
   const sanitizedContent = sanitize(content, {
@@ -59,7 +59,7 @@ export const PostContent = ({ content }: { content: string }) => {
     <div className="blog-content mx-auto">
       <ContentWithCustomComponents
         content={sanitizedContent}
-        customComponents={{ TerminalDemo, CodeArea }}
+        customComponents={{ TerminalCode, CodeArea }}
       />
     </div>
   );
