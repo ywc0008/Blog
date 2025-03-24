@@ -24,7 +24,7 @@ export const Footer: FunctionComponent = () => {
           <Link href="/rss">
             <Rss className="h-5 w-5" />
           </Link>
-          <Link href="https://github.com/ywc0008">
+          <Link target="_blank" href="https://github.com/ywc0008">
             <Github className="h-5 w-5" />
           </Link>
         </div>
